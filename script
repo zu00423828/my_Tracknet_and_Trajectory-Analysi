@@ -1,0 +1,21 @@
+#Training model example 
+python train.py --save_weights_path=weights/model --training_images_name="training_model2.csv" --epochs=500 --n_classes=256 --input_height=360 --input_width=640 --load_weights=2 --step_per_epochs=200 --batch_size=2
+
+#Output all of predict heatmaps example 
+python  predict.py  --save_weights_path=weights/model.2 --test_images="/media/andersen/D/Thesis/Dataset/Clip"  --output_path="/media/andersen/D/Thesis/Prediction/Model2/Clip" --n_classes=256 --input_height=360 --input_width=640 --output_height=720 --output_width=1280 
+
+#Predict video example
+python  predict_video.py  --save_weights_path=weights/model.2 --input_video_path="/media/andersen/D/Test/Clip1.mp4" --output_video_path="/media/andersen/D/Test/Clip_TrackNet.mp4" --n_classes=256 
+
+
+
+python train.py --save_weights_path=weights/model --training_images_name="training_model2.csv" --epochs=500 --n_classes=256 --input_height=288 --input_width=512 --load_weights=-1 --step_per_epochs=200 --batch_size=2
+
+python  predict.py  --save_weights_path=weights/model.0 --test_images="/home/yuan/Dataset/Clip"  --output_path="/home/yuan/Prediction/Model2/Clip" --n_classes=256 --input_height=288 --input_width=512 --output_height=720 --output_width=1280
+
+python  predict_video.py  --save_weights_path=weights/model.0 --input_video_path="/home/yuan/Test/Clip1.mp4" --output_video_path="/home/yuan/Test/Clip_TrackNet.mp4" --n_classes=256
+
+
+python  predict_time.py  --save_weights_path=weights/model.0 --test_images="/home/yuan/orgin/clip"  --output_path="/home/yuan/orgin/clip_n" --n_classes=256 --input_height=288 --input_width=512 --output_height=720 --output_width=1280
+
+python  video_time.py  --save_weights_path=weights/model.0 --input_video_path="iv/Clip1.mp4" --output_video_path="ov/Clip_TrackNet123.mp4" --n_classes=256
